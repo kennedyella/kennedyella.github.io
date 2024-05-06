@@ -1,0 +1,278 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+/* IMPORTED FONTS */
+
+@font-face{
+    font-family: "ultra";
+    src: url('../fonts/serif/ultra-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "roboto";
+    src: url('../fonts/sans-serif/roboto-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "opensans";
+    src: url('../fonts/sans-serif/opensans-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* TYPOGRAPHY */
+
+p{
+    font-family: roboto, Arial, sans-serif;
+    line-height: 1.5rem;
+}
+
+h1, h2, h3, h4{
+    font-family: opensans, Helvetica, sans-serif;
+    letter-spacing: 0.0325rem;
+    color: #01161E;
+}
+
+.highlight{
+    display: inline-block;
+    font-family: ultra, Georgia, serif;
+    padding: 1rem 1.75rem;
+    border-radius: 0.3rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: #EFF6E0;
+    background-color: #124559;
+    box-shadow: 5px 5px 4px -1px #888;
+}
+
+h1{
+    font-size: 3rem;
+    letter-spacing: .25rem;
+    transform: rotate(-5deg);
+    color: #01161E;
+}
+
+.blog{
+    transform: rotate(5deg);
+    text-decoration: line-through;
+    color: black;
+    text-transform: uppercase;
+
+}
+
+time{
+    font-style:italic;
+}
+
+button{
+    font-family: ultra, Georgia, serif;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    color: #EFF6E0;
+    background-color: #124559;
+    box-shadow: 5px 5px 4px -1px #888;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+
+
+/* GENERAL SETUP AND DEFAULTS */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size:16px;
+    margin-bottom: 2rem;
+}
+
+body {
+    margin: 1.5rem auto;
+    width:90%;
+    min-width:56.25rem;
+}
+
+
+
+
+/* LAYOUT */
+
+header{
+    padding: 0.5rem 0rem 1rem 0rem;
+    text-align: center;
+}
+
+nav{
+    margin-top: 3rem;
+}
+
+.main-section{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 1rem;
+}
+
+article{
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+aside{
+    grid-column: 2/3;
+    grid-row:1;
+    border-left: 1px solid #01161E;
+    padding-left: 1rem;
+}
+
+aside p {
+    border-bottom: 1px solid #01161E;
+    padding-bottom: 1.5rem;
+}
+
+.subsection{
+    display: flex;
+}
+
+footer{
+    margin-top: 8rem;
+    
+}
+
+footer .copyright {
+    float: left;
+    
+}
+
+footer .attribution p{
+    display: inline;
+}
+
+
+footer .attribution{
+    width: 75%;
+    float: right;
+    text-align: right;
+}
+
+
+
+
+/* IMAGES AND FIGURES */
+
+img {
+    width: 100%;
+}
+
+figure {
+    margin: 0px;
+}
+
+.article-image {
+    width: 33%;
+    float: left;
+    margin-right: 0.75rem;
+}
+
+.subsection{
+    margin: 1rem 0px;
+}
+
+.subsection figure{
+    margin: 0rem 0.25rem;
+    background-color: #EFF6E0;
+}
+
+.subsection figure figcaption{
+    padding: 0.5rem 0.5rem;
+    font-family: opensans, Helvetica, sans-serif;
+}
+
+.expand{
+    display: block;
+    font-size: .25rem;
+    padding-top: .75rem;
+}
+
+
+/* LINKS AND NAVIGATION */
+
+a{
+    text-decoration: none;
+}
+
+nav a {
+    display: inline-block;
+    padding: 1.25rem 2rem;
+    font-size: 1.5rem;
+    font-family: opensans, Helvetica, sans-serif;
+    color: #01161E
+}
+
+nav{
+    border-top: 1px solid #01161E;
+    border-bottom: 1px solid #01161E;
+}
+
+a {
+    outline: none;
+}
+
+footer a:link, a:visited {
+    color: #124559;
+}
+
+a:focus, a:hover {
+    color: #01161E;
+}
